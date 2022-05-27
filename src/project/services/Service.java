@@ -12,12 +12,14 @@ public class Service {
     private ArrayList<Employee> employees;
     private ArrayList<Appointment> appointments;
     private static ReadWriteService readWriteService;
+    private static AuditService auditService;
 
     public Service() throws IOException {
         this.clients = new ArrayList<>();
         this.employees = new ArrayList<>();
         this.appointments = new ArrayList<>();
         Service.readWriteService = ReadWriteService.getReadWriteService();
+        Service.auditService = AuditService.getAuditService();
     }
 
     public static void csvTest(){
@@ -222,5 +224,6 @@ public class Service {
                     break;
             }
         }
+        auditService.writeAuditDataReport("csvTest");
     }
 }

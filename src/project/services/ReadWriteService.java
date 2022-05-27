@@ -18,10 +18,10 @@ public class ReadWriteService {
     private static String appointmentFilePath;
 
     private ReadWriteService() {
-        clientFilePath = "src/project/csv_input/clientReportData.csv";
-        hairDresserFilePath = "src/project/csv_input/hairDresserReportData.csv";
-        beautifierFilePath = "src/project/csv_input/beautifierReportData.csv";
-        appointmentFilePath = "src/project/csv_input/appointmentReportData.csv";
+        clientFilePath = "src/project/csv_files/clientReportData.csv";
+        hairDresserFilePath = "src/project/csv_files/hairDresserReportData.csv";
+        beautifierFilePath = "src/project/csv_files/beautifierReportData.csv";
+        appointmentFilePath = "src/project/csv_files/appointmentReportData.csv";
     }
     public static ReadWriteService getReadWriteService() {
         if (readWriteService == null)
