@@ -1,27 +1,30 @@
 package project.classes;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Employee extends Person {
     private static int empCounter;
     protected int salary;
     protected int payday;
-    protected int monthlyAppointmentsCounter;
+    protected List<Integer> monthlyAppointmentsCounter;
 
-    public Employee(String name, String phoneNumber, String email, int salary, int payday, int monthlyAppointmentsCounter) {
+    public Employee(String name, String phoneNumber, String email, int salary, int payday) {
         super(name, phoneNumber, email);
         Employee.empCounter++;
         this.salary = salary;
         this.payday = payday;
-        this.monthlyAppointmentsCounter = monthlyAppointmentsCounter;
+        this.monthlyAppointmentsCounter = new ArrayList<Integer>(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
     }
 
-    public Employee(int personId, String name, String phoneNumber, String email, int salary, int payday, int monthlyAppointmentsCounter) {
+    public Employee(int personId, String name, String phoneNumber, String email, int salary, int payday) {
         super(personId, name, phoneNumber, email);
         Employee.empCounter++;
         this.salary = salary;
         this.payday = payday;
-        this.monthlyAppointmentsCounter = monthlyAppointmentsCounter;
+        this.monthlyAppointmentsCounter = new ArrayList<Integer>(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
     }
 
     public Employee() {
@@ -29,7 +32,7 @@ public abstract class Employee extends Person {
         Employee.empCounter++;
         this.salary = 0;
         this.payday = 0;
-        this.monthlyAppointmentsCounter = 0;
+        this.monthlyAppointmentsCounter = new ArrayList<Integer>(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
     }
 
     public static int getEmpCounter() {
@@ -48,6 +51,8 @@ public abstract class Employee extends Person {
         this.salary = salary;
     }
 
+    public int getActualSalary(int month) { return this.salary;}
+
     public int getPayday() {
         return payday;
     }
@@ -56,11 +61,11 @@ public abstract class Employee extends Person {
         this.payday = payday;
     }
 
-    public int getMonthlyAppointmentsCounter() {
+    public List<Integer> getMonthlyAppointmentsCounter() {
         return monthlyAppointmentsCounter;
     }
 
-    public void setMonthlyAppointmentsCounter(int monthlyAppointmentsCounter) {
+    public void setMonthlyAppointmentsCounter(List<Integer> monthlyAppointmentsCounter) {
         this.monthlyAppointmentsCounter = monthlyAppointmentsCounter;
     }
 

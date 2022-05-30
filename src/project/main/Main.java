@@ -14,6 +14,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Service s = new Service();
 
-        Service.csvTest();
+//        Service.csvTest();
+        s.start();
     }
 }

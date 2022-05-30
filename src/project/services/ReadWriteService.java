@@ -76,7 +76,7 @@ public class ReadWriteService {
                 bufferedWriter.append(",");
                 bufferedWriter.append(String.valueOf(((Beautifier) ob).getMonthlyAppointmentsCounter()));
                 bufferedWriter.append(",");
-                bufferedWriter.append(String.valueOf(((Beautifier) ob).getServices()));
+//                bufferedWriter.append(String.valueOf(((Beautifier) ob).getServices()));
                 bufferedWriter.append("\n");
             } catch (IOException ex) {
                 ex.printStackTrace();

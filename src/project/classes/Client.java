@@ -1,8 +1,9 @@
 package project.classes;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Client extends Person{
+public class Client extends Person implements Comparable<Client> {
     int age;
 
     public Client(String name, String phoneNumber, String email, int age) {
@@ -51,5 +52,9 @@ public class Client extends Person{
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public int compareTo(Client ob){
+        return this.name.compareTo(ob.name);
     }
 }
