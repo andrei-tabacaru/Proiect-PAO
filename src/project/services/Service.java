@@ -651,7 +651,7 @@ public class Service {
                 appointments.remove(appointment);
         });
 
-        appointments.add(new Appointment(auxEmpId, auxCliId, cost, startDate, endDate));
+        appointments.add(new Appointment(appId, auxEmpId, auxCliId, cost, startDate, endDate));
 
         employees.forEach(employee -> {
             if(employee.getPersonId() == finalEmpId) {

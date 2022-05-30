@@ -6,7 +6,7 @@ public class Manager extends Employee{
     private static String managerName;
     private static Manager manager;
     private Manager() {
-        super("Mr. John Smith","0741112112", "manager@s.beauty.com", 0, 15, 0);
+        super("Mr. John Smith","0741112112", "manager@s.beauty.com", 0, 15);
         managerName = "Mr. John Smith";
     }
     public static Manager getManager() { //3
